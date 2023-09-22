@@ -15,3 +15,12 @@ const obj = {
 
 const arr = Array.from(obj)
 console.log(arr) //[a,b]
+
+const arr2 = Array.from({length: 5})
+console.log(arr2)
+
+const arr3 = Array.from({length: 5}, (el, index) => {
+    return 0
+})
+console.log(arr3)
+//여러분이 설개한 구조에서 필요한 길이만큼 생성해야하는 배열이 있을 때 사용
