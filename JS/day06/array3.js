@@ -46,15 +46,4 @@ console.log(arr3)
 
 // + ealry return에서도 retun은 탈출문이기 때문에 생략하면 안됨, {}는 생략 가능
 
-const generatedMockPosts = (n) => {
-    return Array(n).fill().map((_, i) => (
-        {
-            id: i+1,
-            title: `title-${i+1}`,
-            content: `content-${i+1}`,
-            isLiked: false,
-        }
-    ))
-}
-
 console.log(generatedMockPosts(10))
