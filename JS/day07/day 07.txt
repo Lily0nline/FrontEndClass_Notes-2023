@@ -1,14 +1,68 @@
-
 1. for
-중감식, 조건식 -> 인덱스 조정 가능
+증감식, 조건식 -> 인덱스 조정 가능, 횟수
+반복의 조건을 마음대로 설정할 수 있다
 
 2. forEach
-모든 요소 순회, 인덱스 -> 순서 보장
-                ------
-                    ----> 배열의 특정 요소를 가지고와야할 때  
+이터러블, 모든 요소 순회, 인덱스 -> 순서 보장
+              -------
+                  -----> 배열의 특정 요소를 가지고와야할 때
+            
+3. for in
+이터러블하지 않은 객체의 key
 
-3. for in 
-이처러블하지 않은 객체의 key
+4. for of
+이터러블, 모든 요소 순회, 순서 보장x
 
-4. for of 
-모든 요소 순회
+
+--------------------------------------------------------------------------------
+
+ 백엔드 데이터 상상 > 배열의 내장함수 -> 반복문
+
+--------------------------------------------------------------------------------
+
+ 빌트인 객체
+
+ console.log()
+ Array().fill()
+
+ String
+ Math
+ Date
+ Number ...
+
+
+ 1. Math
+  Math.max(a ... z) a~z중 최댓값
+    ex) Math.max(1,2,3) // 3
+        Math.min(1,2,3) // 1
+        ----> javascript 배열 내 최댓값
+
+
+      threow new Error('error')
+      threow new ReferenceError()
+                 RangeError()
+
+      https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects
+
+   Math.random() 0~1 사이의 무작위 숫자 
+
+   Math.floor(소수) 소수점 이하 버림
+        ceil(소수) 소수점 이하 올림
+        round(소수) 소수점 첫번째 자리에서 반올림
+        trunc(소수) 소수점 이하 절삭
+
+
+  Math.abs(a) -> 절대값
+  Math.sqrt(a) -> 제고급
+  Math.cbrt(a) -> 세제곱근
+  Math.log(a) -> 자연로그
+  ...
+
+  Number 
+    Number.MAX_VALUE : 자바스크립트에서 사용 가능한 가장 큰 숫자 (1.7e+308)
+    Number.MIN_VALUE : 자바스크립트에서 사용 가능한 가장 작은 숫자
+    number.isFinit() : 유한수 무한수
+    Number.toString() : 숫자를 문자열로 반환
+
+    Number("5) : 문자를 숫자로 반환 ---? parseInt("5")
+    ex) "5 -> 5
