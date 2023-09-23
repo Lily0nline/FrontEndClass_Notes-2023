@@ -19,3 +19,9 @@ date.toDateString // 시분초를 생략
 
 console.log(date.toString()) //현재 위치 시간
 console.log(date.toISOString()) // utc-0
+console.log(date.toLocaleString()) //현재 지역에 맞는 날짜와 시간으로 변환
+
+const thisYear = date.getFullYear() //2023
+date.setFullYear(thisYear - 1) //2023 - 1 
+console.log(date.getFullYear) // 2022
+//날짜 끼리의 연산도 가능하다
