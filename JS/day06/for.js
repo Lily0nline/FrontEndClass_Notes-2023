@@ -19,3 +19,14 @@ for (let el of arr){
 }
 //순서 보장x, 모든 요소를 순회, 요소의 값만 가지고 올 수 있음
 // 배열의 모든 요소의 값만 필요할 때
+
+const yj = {
+    age: 24,
+    height: 167
+}
+
+for (let key in yj){
+    console.log(key)
+    console.log(yj[key])
+}
+//age 24, height 167
