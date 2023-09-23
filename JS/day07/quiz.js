@@ -37,6 +37,7 @@ input [?,?,?,?,?,?,?]
 로또 여러장 구매해서 맞추기
 */
 
+
 // quiz 1 answer (from what I learned in class before)
 
 /*const phoneNumber = '010-1234-1234'
@@ -55,9 +56,10 @@ function hashNumb(num){
 hashNumb("010-1234-1234")*/
 
 //method 2
+/*
 function hashNumb(num){
     const splitNumber = num.split('-');
 splitNumber[1] = "*".repeat(4);
 console.log(splitNumber.join('-'))
 }
-hashNumb("010-1234-1234")
+hashNumb("010-1234-1234")*/
