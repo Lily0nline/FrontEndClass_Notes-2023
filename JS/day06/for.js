@@ -9,5 +9,12 @@ for(let i = 0; i < arr.length; i++){
 
 arr.forEach((el, index, origin) => {
     console.log(el, index, origin)
+    //backend data fetching
 })
 //순서 보장, 모든 요소를 순회, index를 사용할 수 있음
+
+
+for (let el of arr){
+    console.log(el) // 0,1,2,3
+}
+//순서 보장x, 모든 요소를 순회, 요소의 값만 가지고 올 수 있음
