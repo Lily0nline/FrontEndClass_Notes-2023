@@ -38,6 +38,8 @@ input [?,?,?,?,?,?,?]
 */
 
 
+
+
 // quiz 1 answer (from what I learned in class before)
 
 /*const phoneNumber = '010-1234-1234'
@@ -63,3 +65,31 @@ splitNumber[1] = "*".repeat(4);
 console.log(splitNumber.join('-'))
 }
 hashNumb("010-1234-1234")*/
+
+//quiz 2 solution
+/*
+output --> 1등, 2등, 3등
+       --> 맞춘 갯수 -> 분기(swtich, if)]
+       --> 2등은 bouns 숫자와 연관이 있다 -> 분기 (if)
+       --> 정답, 입력 값 비교
+       --> 정답 랜덤 숫자 7자리
+       --> 입력 랜덤 or 사용자가 직접 입력
+input
+       --> 겹치지 않는 랜덤 숫자 7자리 or 사용자가 직접 입력
+       --> [1, 2, 3, 42, 41, 21, 32] --> 사용자가 직접 입력 (o)
+*/
+
+function generatedLottoNumber(){
+    // 1 ~ 45 random number
+    const random = Math.floor(Math.random () * 45 + 1)
+    // 중복을 허용 하면 안된다
+    // 중복 검사 -> 현재까지 작성한 숫자의 배열을 순회
+
+    const lottoArray = []
+    for(let i = 0; i<7; i++){
+        const random = Math.floor(Math.random() * 45 + 1)
+        if(!lottoArray.includes(random)){
+            lottoArray.push(random)
+        }
+    }
+}
