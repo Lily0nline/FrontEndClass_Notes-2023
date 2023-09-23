@@ -66,3 +66,13 @@
 
     Number("5) : 문자를 숫자로 반환 ---? parseInt("5")
     ex) "5 -> 5
+    형변환 -> 자료혈릏 변환
+
+    typeof 5 //numberif(type === 'number'){
+        ...
+    }
+
+
+    String
+
+    Date
