@@ -30,3 +30,12 @@ for (let key in yj){
     console.log(yj[key])
 }
 //age 24, height 167
+// 객체를 반복, 순서가 보장되지는 않습니다.
+
+Object.keys(yj) //[age, height]
+Object.values(yj) //[24,167]
+Object.entries(yj) //[[age,24][height,167]]
+
+for(let [key, value]of Object.entries(yj)){
+    console.log(key, value)
+}
