@@ -17,4 +17,5 @@ console.log(date.getDay()) // 6 (0: sunday, 6: saturday)
 date.toString()//문자열
 date.toDateString // 시분초를 생략
 
-console.log(date.toString())
+console.log(date.toString()) //현재 위치 시간
+console.log(date.toISOString()) // utc-0
