@@ -8,4 +8,10 @@ const lottoService = require('./quiz')
 const generatedLottoNumberArray = (count) =>{
     return Array.from({length: count}, () => lottoService.generatedLottoNumber())
 }
-console.log(generatedLottoNumberArray(5))
+
+const userNumbersArray = generatedLottoNumberArray(5)
+
+for (let userNumbers of userNumbersArray){
+    const rank = lottoService.lottery(userNumbers);
+    console.log(rank)
+}
