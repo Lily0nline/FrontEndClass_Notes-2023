@@ -97,3 +97,6 @@ function lottery (userNumbers){
     }
     console.log(rank)
 }
+
+const userNumbers = generatedLottoNumber()
+lottery(userNumbers)
