@@ -47,6 +47,9 @@ function lottery (userNumbers){
     let rank;
     let winningCount = 0;
     let winningNumberArray = [2, 5, 12, 17, 6, ,21, 11]
+    let bonusNumber = userNumbers.pop()
+    // pop -> 원본 배열의 마지막 제거
+    //반환 값 => 제거한 값
 
     /*
     [?,?,?,?,?,?] -userNumbers
@@ -58,4 +61,18 @@ function lottery (userNumbers){
     순회 -> forEach, for..of
     포함되어있는지 검사 -> includes 
     */
+
+    /*winningCount = userNumbers.reduce((sum, el) => {
+        if(winningNumberArray.includes(el)){
+            sum++
+        }
+    }, 0)*/
+
+    for(let number of userNumbers){
+        if(winningNumberArray.includes(number)){
+            winningCount++
+        }
+    }
+
+
 }
