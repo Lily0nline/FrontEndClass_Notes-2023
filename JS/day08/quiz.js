@@ -96,5 +96,4 @@ function lottery (userNumbers){
                 break;
     }
     console.log(rank)
-
 }
