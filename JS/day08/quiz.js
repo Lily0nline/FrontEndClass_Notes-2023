@@ -27,13 +27,18 @@ input - 정답, 입력 값 ----> [?,?,?,?,?,?,?]
 function generatedLottoNumber(){
     const lottoNumbers = [];
     //for, while 
-
     //for(;lottoNumbers.length < 7;){
     //}
 
+    //new set()
     while(lottoNumbers.length < 7){
+        //1-45
+        const randomNumber = Math.floor(Math.random () * 45 + 1) // adding + 1 to not include 0 if you want to add 0 change 45 to 46 (* 46)
+        
 
         if(!lottoNumbers.includes(randomNumber)){
-        lottoNumbers.push(randomNumber)}
+         lottoNumbers.push(randomNumber)
+        }
     }
+    return lottoNumbers
 }
