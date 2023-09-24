@@ -8,3 +8,4 @@ const lottoService = require('./quiz')
 const generatedLottoNumberArray = (count) =>{
     return Array.from({length: count}, () => lottoService.generatedLottoNumber())
 }
+console.log(generatedLottoNumberArray(5))
