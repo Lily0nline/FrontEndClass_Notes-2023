@@ -100,3 +100,8 @@ function lottery (userNumbers){
 
 const userNumbers = generatedLottoNumber()
 lottery(userNumbers)
+
+module.exports = {
+    lottery,
+    generatedLottoNumber
+}
