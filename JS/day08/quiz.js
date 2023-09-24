@@ -42,3 +42,20 @@ function generatedLottoNumber(){
     }
     return lottoNumbers
 }
+
+function lottery (userNumbers){
+    let rank;
+    let winningCount = 0;
+    let winningNumberArray = [2, 5, 12, 17, 6, ,21, 11]
+
+    /*
+    [?,?,?,?,?,?] -userNumbers
+    winningNumbersArray
+
+    userNumbers의 각 요소가 winningNumbersArray에 포함되어 있는지 확인
+    배열의 요소가 다른 배열의 요소에 포함되어 있는지
+
+    순회 -> forEach, for..of
+    포함되어있는지 검사 -> includes 
+    */
+}
