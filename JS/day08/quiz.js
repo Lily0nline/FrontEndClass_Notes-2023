@@ -74,5 +74,27 @@ function lottery (userNumbers){
         }
     }
 
+    switch(winningCount){
+        case 6:
+            rank = 1;
+            break;
+        case 5:
+            if(winningNumberArray.includes(bonusNumber)){
+                rank = 2;
+            }else{
+                rank = 3;
+            }
+            break;
+            case 4:
+                rank = 4;
+                break;
+            case 3:
+                rank = 5;
+                break;
+            default:
+                rank = 'Try again next time';
+                break;
+    }
+    console.log(rank)
 
 }
