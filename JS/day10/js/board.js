@@ -19,20 +19,41 @@ $boardList.innerHTML = '<div>Hello</div>'
 // 4. insertAdjacentElement
 
 // MockPosts -> [article, article, article] -> join 'article article article'
-const renderPosts = () => {
-const posts = MockPosts.map((post) => 
-`<div class="board-list"> <article class="board-card">
-<h3 class="flex-center">
-${post.title}
-<button>삭제</button>
-</h3> 
-<div class="flex-center">
-${post.content}
-</div>
-</article>`).join('')
+const renderPost = (post) => {
+// const posts = MockPosts.map((post) => 
+// `<div class="board-list"> <article class="board-card">
+// <h3 class="flex-center">
+// ${post.title}
+// <button>삭제</button>
+// </h3> 
+// <div class="flex-center">
+// ${post.content}
+// </div>
+// </article>`).join('')
+// $boardList.innerHTML = posts 
+const $article = document.createElement('article')
+const $h3 = document.createElement('h3')
+const $deleteBtn = document.createElement('button')
+const $content = document.createElement('div')
 
-$boardList.innerHTML = posts }
-renderPosts();
+$h3.className = 'flex-center'
+$h3.innerHTML = post.title
+$deleteBtn.addEventListener('click', () => console.log('delete!!'))
+$deleteBtn.innerText = 'delete'
+$h3.append($deleteBtn)
+
+$content.className = 'flex-center'
+$content.innerHTML = post.content
+
+$article.className = 'board-card'
+$article.append($h3)
+$article.append($content)
+}
+for (let post of MockPosts){
+    renderPost({
+        ...post //id, content, title
+    })
+}
 
 // Create 
 // 작성 버튼을 누르면 작성한 내용을 
