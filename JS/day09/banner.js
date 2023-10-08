@@ -1,5 +1,4 @@
 
-
 /* 
 banner의 next button을 누르면 index의 값에 따라
 해당하는 banner, opactiy = 0, prev button을 누르면 index -1
