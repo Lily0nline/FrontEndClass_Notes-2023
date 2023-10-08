@@ -48,10 +48,12 @@ $content.innerHTML = post.content
 $article.className = 'board-card'
 $article.append($h3)
 $article.append($content)
+
+$boardList.append($article)
 }
 for (let post of MockPosts){
     renderPost({
-        ...post //id, content, title
+      ...post 
     })
 }
 
