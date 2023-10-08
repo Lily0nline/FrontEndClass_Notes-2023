@@ -47,12 +47,21 @@ $content.innerHTML = post.content
 
 $article.className = 'board-card'
 $article.setAttribute('data-role', post.id)
+$article.addEventListener('click', () => console.log('상세 내용'))
+// find, attribute, innerText
+// 수정 -> input으로 요소로 바꿔주고 완료 버튼을 누르면 input의 value로 업데이트
 
 $article.append($h3)
 $article.append($content)
 
 $boardList.append($article)
 }
+
+
+const deletePost = (event) => {
+    console.log(event)
+}
+
 for (let post of MockPosts){
     renderPost({
       ...post 
