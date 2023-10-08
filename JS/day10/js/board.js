@@ -59,7 +59,22 @@ $boardList.append($article)
 
 
 const deletePost = (event) => {
-    console.log(event)
+    console.log(event.target)
+    const article = event.target.parentNode.parentNode
+    //내가 선택한 post의 id를 알기 위해서
+    const postId = article.getAttribute('data-role')
+
+    const deletePostIndex = MockPosts.findIndex((post) => post.id !== parseInt(postId))
+    MockPosts.splice(deletePostIndex, 1)
+    //내가 삭제한 post를 제외한 배열을 만들어주기 위해서
+
+    $boardList.innerHTML = ''
+    for(let post of deletePost){
+        renderPost({
+            ...post
+        })
+    }
+    //포스트 데이터
 }
 
 for (let post of MockPosts){
