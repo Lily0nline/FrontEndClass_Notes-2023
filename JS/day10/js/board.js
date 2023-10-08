@@ -19,6 +19,7 @@ $boardList.innerHTML = '<div>Hello</div>'
 // 4. insertAdjacentElement
 
 // MockPosts -> [article, article, article] -> join 'article article article'
+const renderPosts = () => {
 const posts = MockPosts.map((post) => 
 `<div class="board-list"> <article class="board-card">
 <h3 class="flex-center">
@@ -30,4 +31,51 @@ ${post.content}
 </div>
 </article>`).join('')
 
-$boardList.innerHTML = posts 
+$boardList.innerHTML = posts }
+renderPosts();
+
+// Create 
+// 작성 버튼을 누르면 작성한 내용을 
+// 1. MockPosts에 추가한 후 다시 랜더한다.
+// 2. append를 활용해서 새로운 게시글을 추가한다.
+
+//작성 인풋(타이틀, 컨텐트), 작성버튼, 
+// 1. MockPosts.push(()) -> render
+// 2. {title, content} -> boardList append 
+
+const $title = document.querySelector('.title')
+const $content = document.querySelector('.content')
+const $writeBtn = document.querySelector('.write-btn')
+
+$writeBtn.addEventListener('click', ()=>{
+    if(!title.value.trim() || !$content.value.trim()){
+        return alert('내용을 입력해주세요')
+    }
+
+    //기존에 있던 데이터 + 새로운 게시글 
+    MockPosts.push({
+        id : Math.floor(Math.random() * 1000000),
+        title: $title.value,
+        content: $content.value 
+    })
+
+    //다시 화면 그린다
+    // renderPosts();
+    const article = document.createElement('article')
+    $article.className = 'board-card' //css
+    $article.innerHTML = `
+    <h3 class="flex-center">
+    ${post.title}
+    <button>삭제</button>
+    </h3> 
+    <div class="flex-center">
+    ${post.content}
+    </div>
+    `
+
+    $boardList.append($article)
+
+    //인풋 초기화
+    $title.value = '';
+    $content.value = '';
+})
