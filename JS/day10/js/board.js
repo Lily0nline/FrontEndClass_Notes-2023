@@ -53,7 +53,6 @@ $article.addEventListener('click', () => console.log('상세 내용'))
 
 $article.append($h3)
 $article.append($content)
-
 $boardList.append($article)
 }
 
@@ -96,7 +95,7 @@ const $title = document.querySelector('.title')
 const $content = document.querySelector('.content')
 const $writeBtn = document.querySelector('.write-btn')
 
-$writeBtn.addEventListener('click', ()=>{
+$writeBtn.addEventListener('click', ()=> {
     if(!title.value.trim() || !$content.value.trim()){
         return alert('내용을 입력해주세요')
     }
@@ -110,7 +109,7 @@ $writeBtn.addEventListener('click', ()=>{
 
     //다시 화면 그린다
     // renderPosts();
-    const article = document.createElement('article')
+    const $article = document.createElement('article')
     $article.className = 'board-card' //css
     $article.innerHTML = `
     <h3 class="flex-center">
