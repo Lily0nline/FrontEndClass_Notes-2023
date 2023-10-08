@@ -15,7 +15,6 @@ ex)
     document.querySelector(html 요소 중에서 내가 원하는 요소 찾기)
     document (html 요소, 최상위 요소)
 
-
     ex)
     const print = (e) => {
             console.log(e.target)
@@ -24,8 +23,14 @@ ex)
     }
 
     document.addEventListener("click", print)
-    document.addEventListener("click", (e))
+    document.addEventListener("click", (e) => {
+        console.log(e.target)
+    })
 
+    function addEventListener(print){
+        let event;
+        print(event)
+    }
 
     click : 요소 클릭
     mouseover : 요소에 마우스 올렸을때
@@ -39,6 +44,10 @@ ex)
     keypress : 키를 입력했을 때
     keyup : 키를 누르고 있다 땐 순간
     keydown : 키를 누른 상태
+    change(oninput) : input의 값이 변경되었을 떄
+    invalid : input의 조건을 어겼을 때
+
+----------------------------------------------
 
 2. 캐처링, 버블링
     이벤트 전파 
@@ -51,15 +60,21 @@ ex)
     캡처링(false)
         부모 요소를 클릭하였을 때 이벤트가 자식 요소로 전파
 
-3. 배어 이벤트, 메뉴 이벤트 
- - disk (과제) 
+----------------------------------------------
 
-4. mocking data (가상 데이터) -> UI
+3.배너 이벤트
 
 ----------------------------------------------
 
-1. promise, async/await, 비동기
+1. 메뉴 이벤트, mocking data (가상 데이터) -> UI(append, clonNode)
 
-2. fetch, axios
+2. promise, async/await, 비동기
 
-----------------------------------------------
+ 3. fetch, axios
+
+ ---------------------------------------------
+
+ 다음주 월요일 오전 10:30 ~ 끝날 때 까지 (14:00) - 녹화본 제공
+ 4. context, closure, prototype, event loop
+
+ ---------------------------------------------
