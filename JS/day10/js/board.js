@@ -46,6 +46,8 @@ $content.className = 'flex-center'
 $content.innerHTML = post.content
 
 $article.className = 'board-card'
+$article.setAttribute('data-role', post.id)
+
 $article.append($h3)
 $article.append($content)
 
