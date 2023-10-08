@@ -64,7 +64,7 @@ const deletePost = (event) => {
     //내가 선택한 post의 id를 알기 위해서
     const postId = article.getAttribute('data-role')
 
-    const deletePostIndex = MockPosts.findIndex((post) => post.id !== parseInt(postId))
+    const deletePostIndex = MockPosts.findIndex((post) => post.id === parseInt(postId))
     MockPosts.splice(deletePostIndex, 1)
     //내가 삭제한 post를 제외한 배열을 만들어주기 위해서
 
