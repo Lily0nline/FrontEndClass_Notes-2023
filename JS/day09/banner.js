@@ -75,4 +75,13 @@ const prevSlideBanner = () => {
   $slideBanner.style.transform = `translateX(-${slideBannerWidth * slideBannerIndex}px)`
 }
 
+const nextSlideBanner = () => {
+  if(slideBannerIndex >= $slideBannerItem.length -1) {
+    slideBannerIndex = 0;
+  } else {
+    slideBannerIndex++;
+  }
+}
+
 $slideBannerPrevBtn.addEventListener('click', prevSlideBanner)
+$slideBannerNextBtn.addEventListener('click', nextSlideBanner)
