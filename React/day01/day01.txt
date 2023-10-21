@@ -110,7 +110,7 @@ SPA (Sing Page Applicagtion) -> 페이지가 하나인 앱
 
   React 프로젝트의 구조
 
-    node_moduels : 현재 프로젝트(폴더 - ex1)에 설치된 라이브러리의 실제 코드들이 저장
+    node_modules : 현재 프로젝트(폴더 - ex1)에 설치된 라이브러리의 실제 코드들이 저장
                    용량이 큼 git에 올리지 않아요
 
                    -> 팀이 사용하는 라이브러리 공유 가능?
