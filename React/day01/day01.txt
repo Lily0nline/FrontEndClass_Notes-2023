@@ -11,7 +11,7 @@ React의 구동 원리와 핵심 컨셉
 
     => 개발자가 원하는 시점에 화면을 리랜더할 수 있다
 
-  ReRedner
+  ReRender
     react는 일반 함수와 변수와 다른 state(상태)라는 값을 갖고 있고
     해당 상태가 바뀌면 해당 부분만 Re Render한다.
 
@@ -130,7 +130,7 @@ SPA (Sing Page Applicagtion) -> 페이지가 하나인 앱
      src의 구조
       App.css -> App.js에서 참조하는 기본 css 파일 -> 모든 컴포넌트에 적용
 
-      App.js -> index.js에 전달되어 실제 index.html에 전달되는 통합 컴포넌트
+      ** App.js -> index.js에 전달되어 실제 index.html에 전달되는 통합 컴포넌트
                 최상위 컴포넌트
 
                 라이브러리의 설정, 옵션
@@ -140,7 +140,7 @@ SPA (Sing Page Applicagtion) -> 페이지가 하나인 앱
       App.test.js -> 테스트 코드 예시 파일 (jest, vitest, burn)
 
       index.css -> app.css와 동일 index.js를 꾸며줌
-      index.js -> 최상위 컴포넌트로서 app.js에서 전달된 컴포넌트를 index.html로 전달
+      ** index.js -> 최상위 컴포넌트로서 app.js에서 전달된 컴포넌트를 index.html로 전달
 
       reportWebvitrals.js -> 프론트에 성능 체크, 사용x, 더 좋은 도구가 존재
 
@@ -150,19 +150,28 @@ SPA (Sing Page Applicagtion) -> 페이지가 하나인 앱
 
  ---------------------------------------------------------------------------------
 
-  babel, module bundler, react-publishing, folder structure
+ React란 ->  다시, 행동한다, 복잡한 인터페이스 조각 -> 조합
+ 
+ declarative, efficient, and flexible JavaScript library for building user interfaces
 
- ---------------------------------------------------------------------------------
+ React의 핵심컨셉 -> virtual dom, Component, ReRender
 
- React란 -> 다시, 행동한다, 복잡한 인터페이스 조각 -> 조합
- React의 핵심컨셉 -> 가상돔, 컴포넌트, 리랜더
  CSR -> 사용자가 화면 그려줌
+  happens when a empty HTML file is first served to the browser 
+  and then HTML is build on the browser and the painting is started.
+
  SSR -> 서버가 화면 그려줌
+ is method or concept when HTML is build on server rather than in the browser (client).
+
  SPA -> html 1개
+ s a web application that loads a single HTML page and dynamically updates 
+ the content as the user interacts with the application.
+
  MPA -> html 여러개
+
  React -> CSR, SPA
  패키지관리툴 -> npm, npx, yarn
- react 프로젝트 -> npx create-reac-tapp [폴더명]
+ react 프로젝트 -> npx create-react-app [폴더명]
                -> vite
 
  프로젝트 구조 -> app.js -> index.js -> index.html
