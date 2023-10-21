@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <!--container-->
+        <div>
+            <!--info-->
+            <input type="text" placeholder="Input text here"/><br>
+            <input type="color"/> <br>
+           <p><input type="date" value="2023-07-22"/></p> 
+            <div><input type="number"/></div>
+            <input type="checkbox"/><br>
+            <input type="radio"/><br>
+            <input type="file"/><br>
+            <input type="email"/><br>
+            <input type="password" placeholder="input password">
+
+            <button>중복 검사</button>
+            <!--
+                The default type in button is submit
+                button === input type submit
+                button type button === input type button
+
+                차이는 form 태그 안에서 재출 역할을 하냐 안하냐의 차이 
+            -->
+            <!--hobby-->
+            <div>
+                hobbies:
+                <select>
+                    <option value="0">baking</option>
+                    <option value="1">knitting</option>
+                    <option value="2">ukulele</option>
+                    <option value="3">coding</option>
+                </select>
+            </div>
+            <!--gender-->
+            <div>
+                gender
+                <!--type radio의 핵심은 name, 같은 name을 가진 것들 중 하나만 선택 가능 -->
+                <!-- for와 id가 같은 것이 하나로 묶여진, label을 클릭해도 묶여진 다른 것이 클릭 된 효과-->
+              <input type="radio" name="gender" id="female"> <label for="female">female</label>
+              <input type="radio" name="gender"> male
+              <input type="radio" name="gender"> hidden
+            </div>
+            <!--family-->
+            <div>
+                <input type="checkbox" value="0"/> Me 
+                <input type="checkbox" value="1"> Parent
+                <input type="checkbox" value="2"> Sibling
+                <input type="checkbox" value="3"> Relative
+            </div>
+        </div>
+    </body>
+</html>

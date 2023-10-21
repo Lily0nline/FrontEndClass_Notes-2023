@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h2>Log-in</h2>
+        <p><input type="text" name="user-email"></p>
+        <p><input type="text" name="user-pw"></p>
+        <button class="login-btn" onclick="onClickLogin()">log-in</button>
+    </div>
+    <script>
+        const $userEmail = document.getElementsByName('user-email')
+        const $userPassword = document.querySelector('[name=user-pw]')
+        const $loginBtn = document.querySelectorAll('.login-btn')
+
+        console.log($userEmail[0], $userPassword)
+
+        // event 
+        /*
+            1. html 요소의 onClick 속성
+            2. dom select의 properties onClick 속성
+            => event target을 찾기가 힘들다.
+            => this를 활용할 순 있지만, 같은 html 파일 안에 있어야한다
+
+            3. addEventListener 
+        */
+
+       // function onClickLogin(){
+       //     console.log($userEmail[0].value, $userPassword.value)
+            // --> backend api data fetching } 
+       // $loginBtn[0].onclick = onClickLogin 
+
+       $loginBtn[0].addEventListener('click', ()=>{
+        console.log(e.target) //사용자가 누른 버튼
+        e.target.innerText = "login successful"
+        console.log($userEmail[0].value, $userPassword.value)
+       })
+
+    </script>
+</body>
+</html>

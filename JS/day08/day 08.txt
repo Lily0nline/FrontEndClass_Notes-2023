@@ -1,0 +1,32 @@
+
+DOM API
+    DOM (Document Object Model) - 문서 객체 모델
+      흔히 html에서 사용하는 div, span과 같은 요소를 나타내는 말
+
+      API (Application Programing Interface)
+       용용 프로그램 사이에서 통신에 사용되는 언어와 메세지 일체를 이야기합니다.
+
+       DOM API -> 프론트 엔드에서버와 사용자의 브라우저가 HTML 요소를 갖고 통신하는 것
+               -> 프론트 엔드에서 DOM 관련된 요소를 JavaScript로 다루기 위한 통신
+               -> HMTL 요소를 자바스크립트로 속성, CSS 등을 마음대로 바끌 수 있는 것
+
+------------------------------------------------------------------------------
+
+    DOM SELECTOR
+        HMTL의 특정한 요소를 선택하여 JavaScript file(.js, <script></script>)로 import(참조, 가지고)하는 것
+
+        1. document.getElementById() --> 단일 객체를 반환
+
+        2. document.getElementsByClassName() --> 복수 객체를 반환
+                                            --- HTMLCollection, 유시배열객체
+
+        3. document.querySelector('css 선택자') --> 단일 객체를 반환
+                                  '#menu'
+                                  '.class'
+
+        4. document.querySelectorAll('css선택자') --> 복수 객체를 반환
+                                                    ----> NodeList, 유시배열 객체, forEach 상용이 가능
+
+------------------------------------------------------------------------------
+
+    Properties
