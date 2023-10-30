@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
+import RootLayout from "../layouts/layout";
 import MainPage from "../pages/main";
 import Todopage from "../pages/todo";
 
@@ -8,12 +9,22 @@ import Todopage from "../pages/todo";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <MainPage/>,
+    element: <RootLayout/>,
+    children: [
+      {
+        path: "",
+        element: <MainPage/>
+      },
+      {
+        // "/todo/3" --> 3 -> todoId
+        path: "/todo/:todoId",
+        element: <Todopage/>
+      }
+    ]
   },
   {
-    // "/todo/3" --> 3 -> todoId
-    path: "/todo/:todoId",
-    element: <Todopage/>
+    path: "/mypage"
+    // element: <HeaderLayout/>
   }
 ]);
 
