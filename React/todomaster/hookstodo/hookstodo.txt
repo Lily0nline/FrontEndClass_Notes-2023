@@ -1,0 +1,12 @@
+
+1. hookstodo 마무리
+    - 중첩 객체 state의 변화를 변경하기 위해선?
+        (객체 안의 객체)
+    - 객체의 state를 변경하기 위해선?
+        (깊은 복사, 참조값)
+
+2. 전역 상태 관리
+    - useReducer
+    - useContext
+
+3. checkList를 꼭 확인해볼 것

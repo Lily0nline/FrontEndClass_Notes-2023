@@ -27,7 +27,7 @@ const SignForm = ({ isFromLogin }) => {
       isVisible: true,
     },
     {
-      name: "password-confim",
+      name: "password-confirm",
       label: "비밀번호 확인",
       isVisible: !isFromLogin
     }
