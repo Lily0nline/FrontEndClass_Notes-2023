@@ -9,4 +9,4 @@
     - useReducer
     - useContext
 
-3. checkList를 꼭 확인해볼 것
+3. checkList를 꼭 확인해볼 것 
